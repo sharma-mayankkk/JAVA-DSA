@@ -3,7 +3,11 @@ package BasicMaths;
 import java.util.Scanner;
 public class basic_02 {
     public static boolean isPrime(int n){
-        for(int i =2; i<n; i++){
+        //corner case:
+        if(n == 2){
+            return true;
+        }
+        for(int i =2; i<=Math.sqrt(n); i++){
             if(n%i == 0){
                 return false;
             }

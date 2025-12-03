@@ -16,7 +16,7 @@ public class array_10 {
         }
         int trappedWater = 0;
         for (int i = 0; i < n; i++) {
-            int waterLevel = Math.min(leftMax[i], rightMax[i]);
+            int waterLevel = Math.min(leftMax[i],rightMax[i]);
             trappedWater += waterLevel - height[i];
         }
         return trappedWater;

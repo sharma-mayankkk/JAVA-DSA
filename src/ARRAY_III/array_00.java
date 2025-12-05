@@ -2,14 +2,18 @@ package ARRAY_III;
 //BUBBLE SORT:
 public class array_00 {
     public static void bubbleSort(int[] arr){
+        //For the best case if the array is already sorted;
+        int swapped =0;
         for(int i=0; i<arr.length-1; i++){
             for(int j=0; j<arr.length-1-i; j++){
                 if(arr[j]>arr[j+1]){
                     int temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
+                    swapped++;
                 }
             }
+            if(swapped ==0) break;
         }
     }
     //Function to print array;
@@ -20,7 +24,7 @@ public class array_00 {
         System.out.println();
     }
     public static void main(String[] args) {
-        int[] arr = {8,4,13,11,17,15};
+        int[] arr = {1,2,3,4,5,6};
         bubbleSort(arr);
         printArray(arr);
     }
